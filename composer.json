@@ -4,22 +4,26 @@
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": ["laravel", "framework"],
-    "license": "MIT",
+    "license": "Apache-2.0",
     "require": {
         "php": "^8.3",
+        "juling/laravel-foundation": "dev-master",
         "laravel/framework": "^12.0",
-        "laravel/octane": "*",
+        "laravel/octane": "^2.8",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "juling/laravel-devtools": "dev-master",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
-        "phpunit/phpunit": "^11.5.3"
+        "phpstan/phpstan": "^1.12",
+        "phpunit/phpunit": "^11.5.3",
+        "zircote/swagger-php": "^5.0"
     },
     "autoload": {
         "psr-4": {
