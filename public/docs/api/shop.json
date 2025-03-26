@@ -1,0 +1,85 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "商城API文档",
+        "description": "2025-03-26",
+        "contact": {
+            "name": "API Develop Team"
+        },
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000/api/shop/",
+            "description": "开发环境"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "商城平台"
+                ],
+                "summary": "首页",
+                "operationId": "e393e154970351d20aecd79715d68b50",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "OptionResponse": {
+                "properties": {
+                    "name": {
+                        "description": "名称",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "val": {
+                        "description": "值",
+                        "type": "integer",
+                        "example": 1
+                    }
+                },
+                "type": "object"
+            },
+            "PaginateLinkVo": {
+                "properties": {
+                    "url": {
+                        "description": "链接URL",
+                        "type": "string"
+                    },
+                    "label": {
+                        "description": "页标签",
+                        "type": "string"
+                    },
+                    "next": {
+                        "description": "当前页",
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "description": "JWT 认证信息",
+                "name": "Authorization",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "商城平台",
+            "description": "商城平台"
+        }
+    ]
+}

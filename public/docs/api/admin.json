@@ -1,0 +1,85 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "管理员API文档",
+        "description": "2025-03-26",
+        "contact": {
+            "name": "API Develop Team"
+        },
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000/api/admin/",
+            "description": "开发环境"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "管理平台"
+                ],
+                "summary": "首页",
+                "operationId": "02871e91ba69bd3794947262add681fd",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "OptionResponse": {
+                "properties": {
+                    "name": {
+                        "description": "名称",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "val": {
+                        "description": "值",
+                        "type": "integer",
+                        "example": 1
+                    }
+                },
+                "type": "object"
+            },
+            "PaginateLinkVo": {
+                "properties": {
+                    "url": {
+                        "description": "链接URL",
+                        "type": "string"
+                    },
+                    "label": {
+                        "description": "页标签",
+                        "type": "string"
+                    },
+                    "next": {
+                        "description": "当前页",
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "description": "JWT 认证信息",
+                "name": "Authorization",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "管理平台",
+            "description": "管理平台"
+        }
+    ]
+}
