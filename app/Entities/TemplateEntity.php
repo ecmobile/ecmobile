@@ -12,7 +12,7 @@ class TemplateEntity
 {
     use DTOHelper;
 
-    const string getId = 'id';
+    const string getIdx = 'idx';
 
     const string getFilename = 'filename';
 
@@ -22,7 +22,7 @@ class TemplateEntity
 
     const string getSortOrder = 'sort_order';
 
-    const string getIdValue = 'id_value';
+    const string getId = 'id';
 
     const string getNumber = 'number';
 
@@ -32,8 +32,8 @@ class TemplateEntity
 
     const string getRemarks = 'remarks';
 
-    #[OA\Property(property: 'id', description: 'ID', type: 'integer')]
-    private int $id;
+    #[OA\Property(property: 'idx', description: '', type: 'integer')]
+    private int $idx;
 
     #[OA\Property(property: 'filename', description: '', type: 'string')]
     private string $filename;
@@ -47,8 +47,8 @@ class TemplateEntity
     #[OA\Property(property: 'sortOrder', description: '', type: 'integer')]
     private int $sortOrder;
 
-    #[OA\Property(property: 'idValue', description: '', type: 'integer')]
-    private int $idValue;
+    #[OA\Property(property: 'id', description: 'ID', type: 'integer')]
+    private int $id;
 
     #[OA\Property(property: 'number', description: '', type: 'integer')]
     private int $number;
@@ -63,19 +63,19 @@ class TemplateEntity
     private string $remarks;
 
     /**
-     * 获取ID
+     * 获取
      */
-    public function getId(): int
+    public function getIdx(): int
     {
-        return $this->id;
+        return $this->idx;
     }
 
     /**
-     * 设置ID
+     * 设置
      */
-    public function setId(int $id): void
+    public function setIdx(int $idx): void
     {
-        $this->id = $id;
+        $this->idx = $idx;
     }
 
     /**
@@ -143,19 +143,19 @@ class TemplateEntity
     }
 
     /**
-     * 获取
+     * 获取ID
      */
-    public function getIdValue(): int
+    public function getId(): int
     {
-        return $this->idValue;
+        return $this->id;
     }
 
     /**
-     * 设置
+     * 设置ID
      */
-    public function setIdValue(int $idValue): void
+    public function setId(int $id): void
     {
-        $this->idValue = $idValue;
+        $this->id = $id;
     }
 
     /**

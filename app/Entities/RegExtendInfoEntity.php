@@ -12,7 +12,7 @@ class RegExtendInfoEntity
 {
     use DTOHelper;
 
-    const string getId = 'Id';
+    const string getId = 'id';
 
     const string getUserId = 'user_id';
 
@@ -20,7 +20,7 @@ class RegExtendInfoEntity
 
     const string getContent = 'content';
 
-    #[OA\Property(property: 'id', description: '', type: 'integer')]
+    #[OA\Property(property: 'id', description: 'ID', type: 'integer')]
     private int $id;
 
     #[OA\Property(property: 'userId', description: '', type: 'integer')]
@@ -33,7 +33,7 @@ class RegExtendInfoEntity
     private string $content;
 
     /**
-     * 获取
+     * 获取ID
      */
     public function getId(): int
     {
@@ -41,7 +41,7 @@ class RegExtendInfoEntity
     }
 
     /**
-     * 设置
+     * 设置ID
      */
     public function setId(int $id): void
     {

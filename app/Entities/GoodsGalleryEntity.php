@@ -24,6 +24,8 @@ class GoodsGalleryEntity
 
     const string getImgOriginal = 'img_original';
 
+    const string getSortOrder = 'sort_order';
+
     #[OA\Property(property: 'imgId', description: '', type: 'integer')]
     private int $imgId;
 
@@ -41,6 +43,9 @@ class GoodsGalleryEntity
 
     #[OA\Property(property: 'imgOriginal', description: '', type: 'string')]
     private string $imgOriginal;
+
+    #[OA\Property(property: 'sortOrder', description: '', type: 'integer')]
+    private int $sortOrder;
 
     /**
      * 获取
@@ -136,5 +141,21 @@ class GoodsGalleryEntity
     public function setImgOriginal(string $imgOriginal): void
     {
         $this->imgOriginal = $imgOriginal;
+    }
+
+    /**
+     * 获取
+     */
+    public function getSortOrder(): int
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * 设置
+     */
+    public function setSortOrder(int $sortOrder): void
+    {
+        $this->sortOrder = $sortOrder;
     }
 }
