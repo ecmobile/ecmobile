@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('suppliers', function (Blueprint $table) {
             $table->increments('suppliers_id');
             $table->string('suppliers_name')->nullable();
-            $table->text('suppliers_desc')->nullable();
+            $table->mediumText('suppliers_desc')->nullable();
             $table->unsignedTinyInteger('is_check')->default(1);
         });
     }

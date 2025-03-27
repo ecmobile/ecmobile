@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stats', function (Blueprint $table) {
-            $table->increments('id');
             $table->unsignedInteger('access_time')->default(0)->index('access_time');
             $table->string('ip_address', 15)->default('');
             $table->unsignedInteger('visit_times')->default(1);

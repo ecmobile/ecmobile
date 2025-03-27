@@ -12,12 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('searchengine', function (Blueprint $table) {
-            $table->increments('id');
-            $table->date('date')->default('2000-01-01');
+            $table->date('date')->default('1970-01-01');
             $table->string('searchengine', 20)->default('');
             $table->unsignedInteger('count')->default(0);
 
-            $table->unique(['date', 'searchengine'], 'date_searchengine');
+            $table->primary(['date', 'searchengine']);
         });
     }
 

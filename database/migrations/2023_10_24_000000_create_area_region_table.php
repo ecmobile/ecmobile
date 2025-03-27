@@ -12,11 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('area_region', function (Blueprint $table) {
-            $table->increments('id');
             $table->unsignedInteger('shipping_area_id')->default(0);
             $table->unsignedInteger('region_id')->default(0);
 
-            $table->unique(['shipping_area_id', 'region_id'], 'shipping_area_id_region_id');
+            $table->primary(['shipping_area_id', 'region_id']);
         });
     }
 

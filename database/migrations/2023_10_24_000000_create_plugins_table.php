@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('plugins', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('code', 30)->default('')->unique('code');
+            $table->string('code', 30)->default('')->primary();
             $table->string('version', 10)->default('');
             $table->string('library')->default('');
             $table->unsignedTinyInteger('assign')->default(0);

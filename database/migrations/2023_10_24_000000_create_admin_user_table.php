@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('lang_type', 50)->default('');
             $table->unsignedInteger('agency_id')->index('agency_id');
             $table->unsignedInteger('suppliers_id')->nullable()->default(0);
-            $table->text('todolist')->nullable();
+            $table->longText('todolist')->nullable();
             $table->integer('role_id')->nullable();
         });
     }

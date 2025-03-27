@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedTinyInteger('ad_type')->default(1);
             $table->string('ad_name', 60)->nullable();
             $table->unsignedInteger('add_time')->default(0);
-            $table->text('content')->nullable();
+            $table->mediumText('content')->nullable();
             $table->string('url')->nullable();
             $table->unsignedTinyInteger('ad_status')->default(0);
         });

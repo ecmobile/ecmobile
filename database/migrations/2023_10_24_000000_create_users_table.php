@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('question')->default('');
             $table->string('answer')->default('');
             $table->unsignedTinyInteger('sex')->default(0);
-            $table->date('birthday')->default('2000-01-01');
+            $table->date('birthday')->default('1970-01-01');
             $table->decimal('user_money', 10)->default(0);
             $table->decimal('frozen_money', 10)->default(0);
             $table->unsignedInteger('pay_points')->default(0);
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->unsignedInteger('address_id')->default(0);
             $table->unsignedInteger('reg_time')->default(0);
             $table->unsignedInteger('last_login')->default(0);
-            $table->dateTime('last_time')->default('2000-01-01 00:00:00');
+            $table->dateTime('last_time')->default('1970-01-01 00:00:00');
             $table->string('last_ip', 15)->default('');
             $table->unsignedInteger('visit_count')->default(0);
             $table->unsignedTinyInteger('user_rank')->default(0);

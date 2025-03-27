@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('article_id');
             $table->integer('cat_id')->default(0)->index('cat_id');
             $table->string('title', 150)->default('');
-            $table->text('content');
+            $table->longText('content');
             $table->string('author', 30)->default('');
             $table->string('author_email', 60)->default('');
             $table->string('keywords')->default('');

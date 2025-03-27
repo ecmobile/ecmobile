@@ -12,13 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('volume_price', function (Blueprint $table) {
-            $table->increments('id');
             $table->unsignedTinyInteger('price_type');
             $table->unsignedInteger('goods_id');
             $table->unsignedInteger('volume_number')->default(0);
             $table->decimal('volume_price', 10)->default(0);
 
-            $table->unique(['price_type', 'goods_id', 'volume_number'], 'price_type_goods_id_volume_number');
+            $table->primary(['price_type', 'goods_id', 'volume_number']);
         });
     }
 

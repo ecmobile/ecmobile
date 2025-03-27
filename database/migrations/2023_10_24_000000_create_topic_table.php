@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('topic_img')->nullable();
             $table->string('title_pic')->nullable();
             $table->char('base_style', 6)->nullable();
-            $table->text('htmls')->nullable();
+            $table->mediumText('htmls')->nullable();
             $table->string('keywords')->nullable();
             $table->string('description')->nullable();
         });
