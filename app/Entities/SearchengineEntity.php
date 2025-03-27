@@ -7,8 +7,8 @@ namespace App\Entities;
 use Juling\Foundation\Support\DTOHelper;
 use OpenApi\Attributes as OA;
 
-#[OA\Schema(schema: 'SearchengineEntity')]
-class SearchengineEntity
+#[OA\Schema(schema: 'SearchEngineEntity')]
+class SearchEngineEntity
 {
     use DTOHelper;
 

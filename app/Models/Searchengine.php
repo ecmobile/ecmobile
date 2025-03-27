@@ -6,14 +6,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Searchengine extends Model
+class SearchEngine extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'searchengine';
+    protected $table = 'search_engine';
 
     /**
      * The primary key for the model.

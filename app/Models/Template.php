@@ -20,7 +20,7 @@ class Template extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'idx';
 
     /**
      * The attributes that are mass assignable.
@@ -32,7 +32,7 @@ class Template extends Model
         'region',
         'library',
         'sort_order',
-        'id_value',
+        'id',
         'number',
         'type',
         'theme',

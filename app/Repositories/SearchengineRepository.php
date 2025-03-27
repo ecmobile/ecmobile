@@ -4,34 +4,34 @@ declare(strict_types=1);
 
 namespace App\Repositories;
 
-use App\Entities\SearchengineEntity;
-use App\Models\Searchengine;
+use App\Entities\SearchEngineEntity;
+use App\Models\SearchEngine;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use Juling\Foundation\Contracts\RepositoryInterface;
 use Juling\Foundation\Repositories\CurdRepository;
 
-class SearchengineRepository extends CurdRepository implements RepositoryInterface
+class SearchEngineRepository extends CurdRepository implements RepositoryInterface
 {
-    private static ?SearchengineRepository $instance = null;
+    private static ?SearchEngineRepository $instance = null;
 
     /**
-     * 单例 SearchengineRepository
+     * 单例 SearchEngineRepository
      */
-    public static function getInstance(): SearchengineRepository
+    public static function getInstance(): SearchEngineRepository
     {
         if (is_null(self::$instance)) {
-            self::$instance = new SearchengineRepository;
+            self::$instance = new SearchEngineRepository;
         }
 
         return self::$instance;
     }
 
     /**
-     * 添加 SearchengineEntity
+     * 添加 SearchEngineEntity
      */
-    public function saveEntity(SearchengineEntity $entity): int
+    public function saveEntity(SearchEngineEntity $entity): int
     {
         return $this->save($entity->toEntity());
     }
@@ -39,27 +39,27 @@ class SearchengineRepository extends CurdRepository implements RepositoryInterfa
     /**
      * 按照ID查询返回对象
      */
-    public function findOneById(int $id): ?SearchengineEntity
+    public function findOneById(int $id): ?SearchEngineEntity
     {
         $data = $this->findById($id);
         if (empty($data)) {
             return null;
         }
 
-        return new SearchengineEntity($data);
+        return new SearchEngineEntity($data);
     }
 
     /**
      * 按照条件查询返回对象
      */
-    public function findOne(array $condition = []): ?SearchengineEntity
+    public function findOne(array $condition = []): ?SearchEngineEntity
     {
         $data = $this->find($condition);
         if (empty($data)) {
             return null;
         }
 
-        return new SearchengineEntity($data);
+        return new SearchEngineEntity($data);
     }
 
     /**
@@ -67,7 +67,7 @@ class SearchengineRepository extends CurdRepository implements RepositoryInterfa
      */
     public function builder(): Builder
     {
-        return DB::table('searchengine');
+        return DB::table('search_engine');
     }
 
     /**
@@ -75,6 +75,6 @@ class SearchengineRepository extends CurdRepository implements RepositoryInterfa
      */
     public function model(): Model
     {
-        return new Searchengine;
+        return new SearchEngine;
     }
 }

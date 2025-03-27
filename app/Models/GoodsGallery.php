@@ -33,5 +33,6 @@ class GoodsGallery extends Model
         'img_desc',
         'thumb_url',
         'img_original',
+        'sort_order',
     ];
 }
